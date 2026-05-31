@@ -1,0 +1,1353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Custom Gift Sets — Handcrafted for Weddings, Events & Brands</title>
+  <meta name="description" content="Bespoke candle gift sets hand-crafted for weddings, corporate events, hotels & boutique brands. Custom branding, low MOQ from 50 sets. Worldwide shipping." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --ink: #1a1a18;
+      --warm: #3d2b1f;
+      --sand: #c8b49a;
+      --cream: #f5f0e8;
+      --off-white: #faf8f4;
+      --mid: #7a6a5a;
+      --wa-green: #25d366;
+      --serif: 'Cormorant Garamond', Georgia, serif;
+      --sans: 'Inter', system-ui, sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--sans);
+      background: var(--off-white);
+      color: var(--ink);
+      overflow-x: hidden;
+    }
+
+    /* ─── NAV ─────────────────────────────────────────── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 40px;
+      background: rgba(250,248,244,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(200,180,154,0.25);
+      transition: padding 0.3s;
+    }
+    nav.scrolled { padding: 12px 40px; }
+
+    .nav-logo {
+      font-family: var(--serif);
+      font-size: 1.35rem;
+      font-weight: 400;
+      letter-spacing: 0.08em;
+      color: var(--ink);
+      text-decoration: none;
+    }
+    .nav-logo span { font-style: italic; color: var(--mid); }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+    .nav-links a {
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--mid);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--ink); }
+
+    .nav-cta {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--wa-green);
+      color: #fff;
+      text-decoration: none;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 10px 20px;
+      border-radius: 2px;
+      transition: opacity 0.2s;
+    }
+    .nav-cta:hover { opacity: 0.88; }
+    .nav-cta svg { width: 15px; height: 15px; fill: #fff; flex-shrink: 0; }
+
+    /* ─── HERO ────────────────────────────────────────── */
+    .hero {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding-top: 72px;
+    }
+
+    .hero-left {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 80px 60px 80px 80px;
+    }
+
+    .hero-eyebrow {
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--sand);
+      margin-bottom: 20px;
+    }
+
+    .hero-h1 {
+      font-family: var(--serif);
+      font-size: clamp(2.8rem, 4.5vw, 4.2rem);
+      font-weight: 300;
+      line-height: 1.12;
+      color: var(--ink);
+      margin-bottom: 24px;
+    }
+    .hero-h1 em {
+      font-style: italic;
+      color: var(--mid);
+    }
+
+    .hero-sub {
+      font-size: 0.95rem;
+      font-weight: 300;
+      line-height: 1.75;
+      color: var(--mid);
+      max-width: 420px;
+      margin-bottom: 40px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 56px;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--ink);
+      color: #fff;
+      text-decoration: none;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 14px 28px;
+      border-radius: 2px;
+      transition: background 0.2s;
+    }
+    .btn-primary:hover { background: var(--warm); }
+    .btn-primary svg { width: 16px; height: 16px; fill: #fff; }
+
+    .btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      color: var(--ink);
+      text-decoration: none;
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 14px 28px;
+      border: 1px solid rgba(26,26,24,0.25);
+      border-radius: 2px;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .btn-ghost:hover { border-color: var(--ink); }
+
+    .hero-stats {
+      display: flex;
+      gap: 40px;
+    }
+    .stat-item {}
+    .stat-num {
+      font-family: var(--serif);
+      font-size: 2rem;
+      font-weight: 300;
+      color: var(--ink);
+      line-height: 1;
+    }
+    .stat-label {
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--sand);
+      margin-top: 4px;
+    }
+
+    .hero-right {
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-right img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+    }
+    .hero-badge {
+      position: absolute;
+      bottom: 40px;
+      left: 40px;
+      background: rgba(250,248,244,0.95);
+      backdrop-filter: blur(8px);
+      padding: 16px 20px;
+      border-radius: 4px;
+      border-left: 3px solid var(--sand);
+    }
+    .hero-badge-text {
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      color: var(--mid);
+    }
+    .hero-badge-text strong {
+      display: block;
+      font-family: var(--serif);
+      font-size: 1.1rem;
+      font-weight: 400;
+      color: var(--ink);
+      margin-bottom: 2px;
+    }
+
+    /* ─── MARQUEE ─────────────────────────────────────── */
+    .marquee-wrap {
+      background: var(--ink);
+      padding: 14px 0;
+      overflow: hidden;
+    }
+    .marquee-track {
+      display: flex;
+      gap: 0;
+      animation: marquee 28s linear infinite;
+      white-space: nowrap;
+    }
+    .marquee-track span {
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--sand);
+      padding: 0 32px;
+    }
+    .marquee-track span::after {
+      content: '·';
+      margin-left: 32px;
+      color: rgba(200,180,154,0.4);
+    }
+    @keyframes marquee {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    /* ─── SECTION SHARED ──────────────────────────────── */
+    section { padding: 100px 0; }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+
+    .section-label {
+      display: inline-block;
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--sand);
+      margin-bottom: 16px;
+    }
+
+    .section-title {
+      font-family: var(--serif);
+      font-size: clamp(2rem, 3.5vw, 3rem);
+      font-weight: 300;
+      line-height: 1.2;
+      color: var(--ink);
+      margin-bottom: 16px;
+    }
+    .section-title em { font-style: italic; color: var(--mid); }
+
+    .section-body {
+      font-size: 0.92rem;
+      font-weight: 300;
+      line-height: 1.8;
+      color: var(--mid);
+      max-width: 520px;
+    }
+
+    /* ─── ABOUT ───────────────────────────────────────── */
+    .about { background: var(--cream); }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .about-images {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto;
+      gap: 12px;
+    }
+    .about-img-main {
+      grid-column: 1 / 3;
+      aspect-ratio: 4/3;
+      overflow: hidden;
+      border-radius: 3px;
+    }
+    .about-img-main img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+    .about-img-main:hover img { transform: scale(1.03); }
+
+    .about-img-sm {
+      aspect-ratio: 3/4;
+      overflow: hidden;
+      border-radius: 3px;
+    }
+    .about-img-sm img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+    .about-img-sm:hover img { transform: scale(1.03); }
+
+    .about-content {}
+    .about-content .section-body { margin-bottom: 40px; }
+
+    .about-features {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .about-feature {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+    .feature-icon {
+      width: 36px;
+      height: 36px;
+      background: var(--ink);
+      border-radius: 2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .feature-icon svg { width: 16px; height: 16px; fill: var(--cream); }
+    .feature-text h4 {
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      color: var(--ink);
+      margin-bottom: 3px;
+    }
+    .feature-text p {
+      font-size: 0.8rem;
+      font-weight: 300;
+      line-height: 1.6;
+      color: var(--mid);
+    }
+
+    /* ─── PRODUCTS ────────────────────────────────────── */
+    .products { background: var(--off-white); }
+
+    .products-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 56px;
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+    }
+
+    .product-card {
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+    }
+    .product-card-inner {
+      position: relative;
+      aspect-ratio: 3/4;
+      overflow: hidden;
+    }
+    .product-card-inner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.7s ease;
+    }
+    .product-card:hover .product-card-inner img { transform: scale(1.06); }
+
+    .product-overlay {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      background: linear-gradient(to top, rgba(26,26,24,0.88) 0%, rgba(26,26,24,0.3) 60%, transparent 100%);
+      padding: 28px 24px 24px;
+      transform: translateY(0);
+      transition: background 0.3s;
+    }
+    .product-tag {
+      display: inline-block;
+      font-size: 0.6rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--sand);
+      margin-bottom: 6px;
+    }
+    .product-name {
+      font-family: var(--serif);
+      font-size: 1.25rem;
+      font-weight: 300;
+      color: #fff;
+      line-height: 1.25;
+      margin-bottom: 4px;
+    }
+    .product-meta {
+      font-size: 0.72rem;
+      font-weight: 300;
+      color: rgba(255,255,255,0.6);
+      letter-spacing: 0.04em;
+    }
+
+    .product-cta-row {
+      margin-top: 48px;
+      text-align: center;
+    }
+
+    /* ─── PROOF / SCALE ───────────────────────────────── */
+    .proof {
+      background: var(--ink);
+      padding: 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .proof-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 560px;
+    }
+    .proof-image {
+      position: relative;
+      overflow: hidden;
+    }
+    .proof-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.75;
+      transition: opacity 0.4s;
+    }
+    .proof-image:hover img { opacity: 0.9; }
+
+    .proof-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 80px 70px;
+    }
+    .proof-content .section-label { color: rgba(200,180,154,0.7); }
+    .proof-content .section-title { color: #fff; margin-bottom: 24px; }
+    .proof-content .section-body { color: rgba(255,255,255,0.55); margin-bottom: 48px; }
+
+    .proof-numbers {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      margin-bottom: 48px;
+    }
+    .proof-num-item {}
+    .proof-num {
+      font-family: var(--serif);
+      font-size: 2.8rem;
+      font-weight: 300;
+      color: var(--sand);
+      line-height: 1;
+    }
+    .proof-num-label {
+      font-size: 0.7rem;
+      font-weight: 400;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.4);
+      margin-top: 6px;
+    }
+
+    /* ─── CUSTOMIZATION ───────────────────────────────── */
+    .customize { background: var(--cream); }
+
+    .customize-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .customize-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .step {
+      display: flex;
+      gap: 24px;
+      padding: 24px 0;
+      border-bottom: 1px solid rgba(200,180,154,0.3);
+    }
+    .step:last-child { border-bottom: none; }
+    .step-num {
+      font-family: var(--serif);
+      font-size: 2rem;
+      font-weight: 300;
+      color: rgba(200,180,154,0.5);
+      line-height: 1;
+      min-width: 40px;
+    }
+    .step-content h4 {
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      color: var(--ink);
+      margin-bottom: 6px;
+    }
+    .step-content p {
+      font-size: 0.8rem;
+      font-weight: 300;
+      line-height: 1.65;
+      color: var(--mid);
+    }
+
+    .customize-image {
+      position: relative;
+    }
+    .customize-image-main {
+      aspect-ratio: 3/4;
+      overflow: hidden;
+      border-radius: 3px;
+    }
+    .customize-image-main img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .customize-image-float {
+      position: absolute;
+      bottom: -24px;
+      left: -24px;
+      width: 48%;
+      aspect-ratio: 1;
+      overflow: hidden;
+      border-radius: 3px;
+      border: 4px solid var(--cream);
+    }
+    .customize-image-float img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* ─── PROCESS ─────────────────────────────────────── */
+    .process { background: var(--off-white); }
+
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2px;
+      margin-top: 60px;
+    }
+    .process-step {
+      background: var(--cream);
+      padding: 40px 32px;
+      position: relative;
+    }
+    .process-step::after {
+      content: '→';
+      position: absolute;
+      top: 40px;
+      right: -12px;
+      font-size: 1.2rem;
+      color: var(--sand);
+      z-index: 1;
+    }
+    .process-step:last-child::after { display: none; }
+
+    .process-num {
+      font-family: var(--serif);
+      font-size: 3rem;
+      font-weight: 300;
+      color: rgba(200,180,154,0.35);
+      line-height: 1;
+      margin-bottom: 20px;
+    }
+    .process-step h4 {
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      color: var(--ink);
+      margin-bottom: 10px;
+    }
+    .process-step p {
+      font-size: 0.78rem;
+      font-weight: 300;
+      line-height: 1.65;
+      color: var(--mid);
+    }
+
+    /* ─── GALLERY ─────────────────────────────────────── */
+    .gallery { background: var(--ink); padding: 80px 0; }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 3px;
+    }
+    .gallery-item {
+      aspect-ratio: 2/3;
+      overflow: hidden;
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.8;
+      transition: opacity 0.3s, transform 0.5s;
+    }
+    .gallery-item:hover img { opacity: 1; transform: scale(1.04); }
+
+    /* ─── CTA ─────────────────────────────────────────── */
+    .cta-section {
+      background: var(--cream);
+      padding: 100px 0;
+    }
+
+    .cta-inner {
+      max-width: 760px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .cta-inner .section-title {
+      font-size: clamp(2.2rem, 4vw, 3.5rem);
+      margin-bottom: 20px;
+    }
+    .cta-inner .section-body {
+      max-width: 100%;
+      margin: 0 auto 48px;
+      text-align: center;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 48px;
+    }
+
+    .btn-wa {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--wa-green);
+      color: #fff;
+      text-decoration: none;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 16px 32px;
+      border-radius: 2px;
+      transition: opacity 0.2s;
+    }
+    .btn-wa:hover { opacity: 0.88; }
+    .btn-wa svg { width: 18px; height: 18px; fill: #fff; }
+
+    .btn-email {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: transparent;
+      color: var(--ink);
+      text-decoration: none;
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 16px 32px;
+      border: 1px solid rgba(26,26,24,0.3);
+      border-radius: 2px;
+      transition: border-color 0.2s;
+    }
+    .btn-email:hover { border-color: var(--ink); }
+    .btn-email svg { width: 18px; height: 18px; stroke: var(--ink); fill: none; }
+
+    .cta-contact-info {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.8rem;
+      font-weight: 400;
+      color: var(--mid);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .contact-item:hover { color: var(--ink); }
+    .contact-item svg { width: 14px; height: 14px; }
+
+    /* ─── FOOTER ──────────────────────────────────────── */
+    footer {
+      background: var(--ink);
+      padding: 48px 40px 32px;
+    }
+    .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 24px;
+      padding-bottom: 32px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .footer-logo {
+      font-family: var(--serif);
+      font-size: 1.2rem;
+      font-weight: 300;
+      color: rgba(255,255,255,0.8);
+      letter-spacing: 0.08em;
+    }
+    .footer-logo em { font-style: italic; color: var(--sand); }
+
+    .footer-socials {
+      display: flex;
+      gap: 20px;
+    }
+    .footer-socials a {
+      width: 36px;
+      height: 36px;
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .footer-socials a:hover {
+      border-color: var(--sand);
+      background: rgba(200,180,154,0.1);
+    }
+    .footer-socials svg { width: 14px; height: 14px; fill: rgba(255,255,255,0.6); }
+
+    .footer-bottom {
+      max-width: 1200px;
+      margin: 24px auto 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .footer-copy {
+      font-size: 0.72rem;
+      color: rgba(255,255,255,0.3);
+      letter-spacing: 0.04em;
+    }
+    .footer-contact {
+      display: flex;
+      gap: 24px;
+    }
+    .footer-contact a {
+      font-size: 0.72rem;
+      color: rgba(255,255,255,0.4);
+      text-decoration: none;
+      letter-spacing: 0.04em;
+      transition: color 0.2s;
+    }
+    .footer-contact a:hover { color: var(--sand); }
+
+    /* ─── FLOATING WA ─────────────────────────────────── */
+    .wa-float {
+      position: fixed;
+      bottom: 32px;
+      right: 32px;
+      z-index: 200;
+      width: 56px;
+      height: 56px;
+      background: var(--wa-green);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+      text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .wa-float:hover {
+      transform: scale(1.08);
+      box-shadow: 0 6px 28px rgba(37,211,102,0.5);
+    }
+    .wa-float svg { width: 26px; height: 26px; fill: #fff; }
+    .wa-float::before {
+      content: '';
+      position: absolute;
+      inset: -4px;
+      border-radius: 50%;
+      border: 2px solid rgba(37,211,102,0.35);
+      animation: pulse-ring 2.5s ease-out infinite;
+    }
+    @keyframes pulse-ring {
+      0% { transform: scale(0.95); opacity: 0.8; }
+      70% { transform: scale(1.2); opacity: 0; }
+      100% { transform: scale(1.2); opacity: 0; }
+    }
+
+    /* ─── RESPONSIVE ──────────────────────────────────── */
+    @media (max-width: 1024px) {
+      .hero { grid-template-columns: 1fr; min-height: auto; }
+      .hero-left { padding: 60px 40px; }
+      .hero-right { height: 60vw; min-height: 360px; }
+      .about-grid, .customize-grid, .proof-grid { grid-template-columns: 1fr; gap: 48px; }
+      .proof-image { height: 400px; }
+      .products-grid { grid-template-columns: repeat(2, 1fr); }
+      .process-steps { grid-template-columns: repeat(2, 1fr); }
+      .process-step::after { display: none; }
+      .gallery-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    @media (max-width: 768px) {
+      nav { padding: 14px 20px; }
+      .nav-links { display: none; }
+      .hero-left { padding: 48px 24px; }
+      .container { padding: 0 24px; }
+      section { padding: 72px 0; }
+      .products-grid { grid-template-columns: 1fr; }
+      .process-steps { grid-template-columns: 1fr; }
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+      .proof-numbers { grid-template-columns: 1fr 1fr; }
+      .proof-content { padding: 48px 32px; }
+      .hero-stats { gap: 24px; }
+      .footer-inner { flex-direction: column; align-items: flex-start; }
+      .customize-image-float { display: none; }
+      .products-header { flex-direction: column; align-items: flex-start; gap: 16px; }
+    }
+
+    /* ─── ANIMATIONS ──────────────────────────────────── */
+    .fade-up {
+      opacity: 1;
+      transform: translateY(0);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .fade-up.animate-ready {
+      opacity: 0;
+      transform: translateY(28px);
+    }
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+<!-- FLOATING WHATSAPP -->
+<a class="wa-float" href="https://wa.me/8613666917009?text=Hi!%20I%20found%20your%20custom%20gift%20sets%20and%20I%27d%20love%20to%20get%20a%20quote." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<!-- NAV -->
+<nav id="nav">
+  <a class="nav-logo" href="#">Artisan<span>Gift</span></a>
+  <ul class="nav-links">
+    <li><a href="#products">Products</a></li>
+    <li><a href="#customize">Customize</a></li>
+    <li><a href="#process">Process</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a class="nav-cta" href="https://wa.me/8613666917009?text=Hi!%20I%27d%20like%20to%20get%20a%20quote%20for%20custom%20gift%20sets." target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    Get a Quote
+  </a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <p class="hero-eyebrow">Custom Gift Sets · Worldwide Shipping</p>
+    <h1 class="hero-h1">
+      Every gift<br/>
+      tells a <em>story.</em><br/>
+      Make it yours.
+    </h1>
+    <p class="hero-sub">
+      Bespoke candle gift sets handcrafted for weddings, corporate events, hotels and boutique brands. Your logo, your scent, your story — from 50 sets.
+    </p>
+    <div class="hero-actions">
+      <a class="btn-primary" href="https://wa.me/8613666917009?text=Hi!%20I%27m%20interested%20in%20custom%20gift%20sets.%20Can%20you%20send%20me%20more%20details?" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Chat on WhatsApp
+      </a>
+      <a class="btn-ghost" href="mailto:puneetdas80@gmail.com">Send Enquiry</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat-item">
+        <div class="stat-num">50+</div>
+        <div class="stat-label">Min. Order</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">200+</div>
+        <div class="stat-label">Brands Served</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">12</div>
+        <div class="stat-label">Days Lead Time</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">5</div>
+        <div class="stat-label">Custom Points</div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <img src="imgs/p07.jpg" alt="Custom gift sets handcrafted in bulk — round kraft boxes with branded ribbon" />
+    <div class="hero-badge">
+      <div class="hero-badge-text">
+        <strong>Gift-ready from day one</strong>
+        Design proof before production · Worldwide delivery
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-wrap" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Weddings</span><span>Corporate Events</span><span>Hotel Amenities</span><span>SPA Collections</span><span>Bridesmaid Gifts</span><span>Brand Launches</span><span>Custom Fragrance</span><span>Low MOQ 50 Sets</span><span>Worldwide Shipping</span><span>Design Proof Included</span>
+    <span>Weddings</span><span>Corporate Events</span><span>Hotel Amenities</span><span>SPA Collections</span><span>Bridesmaid Gifts</span><span>Brand Launches</span><span>Custom Fragrance</span><span>Low MOQ 50 Sets</span><span>Worldwide Shipping</span><span>Design Proof Included</span>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-images fade-up">
+        <div class="about-img-main">
+          <img src="imgs/p10.jpg" alt="Handcrafted candles in kraft boxes with branded fabric labels" loading="lazy" />
+        </div>
+        <div class="about-img-sm">
+          <img src="imgs/p02.jpg" alt="Custom branded cotton ribbon" loading="lazy" />
+        </div>
+        <div class="about-img-sm">
+          <img src="imgs/p25.jpg" alt="Carefully packaged gift sets" loading="lazy" />
+        </div>
+      </div>
+      <div class="about-content fade-up">
+        <span class="section-label">Our Craft</span>
+        <h2 class="section-title">Made with intention.<br/><em>Remembered forever.</em></h2>
+        <p class="section-body">
+          We make gift sets that people actually keep. Every candle is hand-poured, every box is assembled by hand, every ribbon is printed with your brand. We've helped 200+ brands across the US, UK, Australia and Europe create gifts their guests still talk about.
+        </p>
+        <div class="about-features">
+          <div class="about-feature">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
+            </div>
+            <div class="feature-text">
+              <h4>Hand-poured, small batch</h4>
+              <p>Every candle is poured by hand in controlled batches — consistent quality, every single time.</p>
+            </div>
+          </div>
+          <div class="about-feature">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+            </div>
+            <div class="feature-text">
+              <h4>5 branding touchpoints</h4>
+              <p>Candle text, container logo, greeting card, box sticker, and branded ribbon — all customizable.</p>
+            </div>
+          </div>
+          <div class="about-feature">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            </div>
+            <div class="feature-text">
+              <h4>Design proof before production</h4>
+              <p>We send a full digital mockup for your approval. Nothing goes to production without your sign-off.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section class="products" id="products">
+  <div class="container">
+    <div class="products-header">
+      <div>
+        <span class="section-label">Product Collections</span>
+        <h2 class="section-title">Six styles.<br/><em>Infinite possibilities.</em></h2>
+      </div>
+      <a class="btn-ghost" href="https://wa.me/8613666917009?text=Hi!%20I%27d%20like%20to%20see%20your%20full%20product%20catalog." target="_blank" rel="noopener">View Full Catalog →</a>
+    </div>
+  </div>
+  <div class="products-grid">
+    <div class="product-card fade-up">
+      <div class="product-card-inner">
+        <img src="imgs/p12.jpg" alt="Round Kraft Box Candle Set" loading="lazy" />
+        <div class="product-overlay">
+          <div class="product-tag">Best Seller</div>
+          <div class="product-name">Round Kraft Box Candle</div>
+          <div class="product-meta">MOQ 50 sets · 12–14 days</div>
+        </div>
+      </div>
+    </div>
+    <div class="product-card fade-up">
+      <div class="product-card-inner">
+        <img src="imgs/p15.jpg" alt="Stone Texture Cup Candle" loading="lazy" />
+        <div class="product-overlay">
+          <div class="product-tag">Hotel & SPA</div>
+          <div class="product-name">Stone-Texture Cup Candle</div>
+          <div class="product-meta">MOQ 50 sets · 12–14 days</div>
+        </div>
+      </div>
+    </div>
+    <div class="product-card fade-up">
+      <div class="product-card-inner">
+        <img src="imgs/p30.jpg" alt="White Gift Box with Branded Ribbon" loading="lazy" />
+        <div class="product-overlay">
+          <div class="product-tag">Corporate Fav</div>
+          <div class="product-name">White Gift Box Set</div>
+          <div class="product-meta">MOQ 50 sets · 12–14 days</div>
+        </div>
+      </div>
+    </div>
+    <div class="product-card fade-up">
+      <div class="product-card-inner">
+        <img src="imgs/p20.jpg" alt="Linen Box with Fabric Pouch" loading="lazy" />
+        <div class="product-overlay">
+          <div class="product-tag">Wedding Fav</div>
+          <div class="product-name">Linen Box + Fabric Pouch</div>
+          <div class="product-meta">MOQ 50 sets · 15–18 days</div>
+        </div>
+      </div>
+    </div>
+    <div class="product-card fade-up">
+      <div class="product-card-inner">
+        <img src="imgs/p40.jpg" alt="Grid Box Bulk Gift Set" loading="lazy" />
+        <div class="product-overlay">
+          <div class="product-tag">Bulk Order</div>
+          <div class="product-name">Grid Box Gift Collection</div>
+          <div class="product-meta">MOQ 100 sets · 14–18 days</div>
+        </div>
+      </div>
+    </div>
+    <div class="product-card fade-up">
+      <div class="product-card-inner">
+        <img src="imgs/p35.jpg" alt="Kraft Wrapped Candle Favors" loading="lazy" />
+        <div class="product-overlay">
+          <div class="product-tag">Event Favors</div>
+          <div class="product-name">Kraft Wrapped Candle Favor</div>
+          <div class="product-meta">MOQ 100 pcs · 10–12 days</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="product-cta-row">
+    <a class="btn-primary" href="https://wa.me/8613666917009?text=Hi!%20I%27d%20like%20to%20discuss%20a%20custom%20gift%20set%20order." target="_blank" rel="noopener">
+      Discuss Your Order
+    </a>
+  </div>
+</section>
+
+<!-- PROOF / SCALE -->
+<section class="proof" id="proof">
+  <div class="proof-grid">
+    <div class="proof-image">
+      <img src="imgs/p07.jpg" alt="Scale production of custom gift sets" loading="lazy" />
+    </div>
+    <div class="proof-content">
+      <span class="section-label">Why Brands Choose Us</span>
+      <h2 class="section-title" style="color:#fff;">Scale without<br/><em>losing soul.</em></h2>
+      <p class="section-body">
+        Whether you need 50 sets for an intimate wedding or 5,000 for a global brand campaign — every piece gets the same care. We've shipped to the US, UK, Canada, Australia, Germany and beyond.
+      </p>
+      <div class="proof-numbers">
+        <div class="proof-num-item">
+          <div class="proof-num">200+</div>
+          <div class="proof-num-label">Brands Served</div>
+        </div>
+        <div class="proof-num-item">
+          <div class="proof-num">50+</div>
+          <div class="proof-num-label">Min. Order</div>
+        </div>
+        <div class="proof-num-item">
+          <div class="proof-num">12</div>
+          <div class="proof-num-label">Days Avg. Lead Time</div>
+        </div>
+        <div class="proof-num-item">
+          <div class="proof-num">15+</div>
+          <div class="proof-num-label">Countries Shipped</div>
+        </div>
+      </div>
+      <a class="btn-wa" href="https://wa.me/8613666917009?text=Hi!%20I%27d%20like%20to%20get%20a%20quote%20for%20custom%20gift%20sets." target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Get a Free Quote
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CUSTOMIZATION -->
+<section class="customize" id="customize">
+  <div class="container">
+    <div class="customize-grid">
+      <div class="customize-content fade-up">
+        <span class="section-label">Customization</span>
+        <h2 class="section-title">Your brand.<br/><em>Every detail.</em></h2>
+        <p class="section-body" style="margin-bottom:40px;">
+          Five touchpoints, one cohesive gift. From the ribbon to the card inside, every element is designed to feel intentional — because it is.
+        </p>
+        <div class="customize-steps">
+          <div class="step">
+            <div class="step-num">01</div>
+            <div class="step-content">
+              <h4>Candle Text</h4>
+              <p>Custom name, date, quote or brand slogan printed or engraved on the candle surface.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">02</div>
+            <div class="step-content">
+              <h4>Container / Shell Logo</h4>
+              <p>Your logo or monogram applied directly to the container — subtle but unmistakable.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">03</div>
+            <div class="step-content">
+              <h4>Greeting Card</h4>
+              <p>Fully custom-designed card with your message, brand colors and typography.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">04</div>
+            <div class="step-content">
+              <h4>Box Sticker</h4>
+              <p>Branded sticker on the gift box exterior — your logo, event name or seasonal design.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">05</div>
+            <div class="step-content">
+              <h4>Branded Ribbon</h4>
+              <p>Custom logo-printed ribbon tied around the box. The first thing guests see.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="customize-image fade-up">
+        <div class="customize-image-main">
+          <img src="imgs/p10.jpg" alt="Custom branded candle gift sets in production" loading="lazy" />
+        </div>
+        <div class="customize-image-float">
+          <img src="imgs/p02.jpg" alt="Custom printed branded ribbon" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process" id="process">
+  <div class="container">
+    <div style="text-align:center; max-width:560px; margin:0 auto;">
+      <span class="section-label">How It Works</span>
+      <h2 class="section-title">From idea to<br/><em>your doorstep.</em></h2>
+    </div>
+    <div class="process-steps">
+      <div class="process-step fade-up">
+        <div class="process-num">01</div>
+        <h4>Inquiry</h4>
+        <p>Share your vision via WhatsApp or email. We respond within 24 hours with options and pricing.</p>
+      </div>
+      <div class="process-step fade-up">
+        <div class="process-num">02</div>
+        <h4>Design Proof</h4>
+        <p>We create a full digital mockup for your approval. Revisions included — no production until you say yes.</p>
+      </div>
+      <div class="process-step fade-up">
+        <div class="process-num">03</div>
+        <h4>Production</h4>
+        <p>Hand-poured and assembled in small batches with rigorous quality control. 10–20 day lead time.</p>
+      </div>
+      <div class="process-step fade-up">
+        <div class="process-num">04</div>
+        <h4>Delivery</h4>
+        <p>Worldwide shipping with full tracking. Fragile-safe packaging to ensure every set arrives perfect.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<div class="gallery">
+  <div class="gallery-grid">
+    <div class="gallery-item"><img src="imgs/p08.jpg" alt="Gift production" loading="lazy" /></div>
+    <div class="gallery-item"><img src="imgs/p09.jpg" alt="Kraft box assembly" loading="lazy" /></div>
+    <div class="gallery-item"><img src="imgs/p11.jpg" alt="Candle gift sets" loading="lazy" /></div>
+    <div class="gallery-item"><img src="imgs/p16.jpg" alt="Stone cup candles" loading="lazy" /></div>
+    <div class="gallery-item"><img src="imgs/p21.jpg" alt="Linen box sets" loading="lazy" /></div>
+  </div>
+</div>
+
+<!-- CTA -->
+<section class="cta-section" id="contact">
+  <div class="container">
+    <div class="cta-inner fade-up">
+      <span class="section-label">Ready to Start?</span>
+      <h2 class="section-title">Let's make<br/><em>something beautiful.</em></h2>
+      <p class="section-body">
+        Tell us your occasion, quantity and vision. We'll come back with options, pricing and a design concept — usually within 24 hours.
+      </p>
+      <div class="cta-buttons">
+        <a class="btn-wa" href="https://wa.me/8613666917009?text=Hi!%20I%27d%20like%20to%20discuss%20a%20custom%20gift%20set%20order.%20Can%20you%20help%20me%20get%20started?" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Chat on WhatsApp
+        </a>
+        <a class="btn-email" href="mailto:puneetdas80@gmail.com?subject=Custom%20Gift%20Set%20Enquiry">
+          <svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          Send an Email
+        </a>
+      </div>
+      <div class="cta-contact-info">
+        <a class="contact-item" href="https://wa.me/8613666917009" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="var(--mid)"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          +86 136 6691 7009
+        </a>
+        <a class="contact-item" href="mailto:puneetdas80@gmail.com">
+          <svg viewBox="0 0 24 24" fill="none" stroke="var(--mid)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          puneetdas80@gmail.com
+        </a>
+        <span class="contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="var(--mid)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          Reply within 24 hours
+        </span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">Artisan<em>Gift</em></div>
+    <div class="footer-socials">
+      <!-- Instagram -->
+      <a href="#" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+      </a>
+      <!-- TikTok -->
+      <a href="#" target="_blank" rel="noopener" aria-label="TikTok">
+        <svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.74a4.85 4.85 0 01-1.01-.05z"/></svg>
+      </a>
+      <!-- Pinterest -->
+      <a href="#" target="_blank" rel="noopener" aria-label="Pinterest">
+        <svg viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 01.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.632-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
+      </a>
+      <!-- WhatsApp -->
+      <a href="https://wa.me/8613666917009" target="_blank" rel="noopener" aria-label="WhatsApp">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      </a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p class="footer-copy">© 2026 ArtisanGift · Custom Gift Sets · All rights reserved</p>
+    <div class="footer-contact">
+      <a href="https://wa.me/8613666917009" target="_blank" rel="noopener">+86 136 6691 7009</a>
+      <a href="mailto:puneetdas80@gmail.com">puneetdas80@gmail.com</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Nav scroll effect
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 60);
+  });
+
+  // Fade-up on scroll — only activate if JS/IntersectionObserver works reliably
+  if ('IntersectionObserver' in window) {
+    // Add animate-ready class first to set initial hidden state
+    document.querySelectorAll('.fade-up').forEach(el => {
+      const rect = el.getBoundingClientRect();
+      // Only animate elements below the fold
+      if (rect.top > window.innerHeight) {
+        el.classList.add('animate-ready');
+      }
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.remove('animate-ready');
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -20px 0px' });
+
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+  }
+</script>
+</body>
+</html>
